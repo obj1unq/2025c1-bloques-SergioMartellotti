@@ -1,7 +1,9 @@
 object pepita {
   var energia = 100
 
-  method energia() = energia
+  method energia(){
+    return energia
+  }
 
   method volar(distancia) {
     self.validarVolar(distancia)
@@ -24,8 +26,29 @@ object pepita {
 
 }
 
+object roque{
+  var ave = pepita
+  var rutina = {}
+
+  method rutina(_rutina){
+    rutina = _rutina
+  }
+
+  method ave(_ave){
+    ave = _ave
+  }
+
+  method entrenar(){
+    rutina.apply(ave)
+  }
+
+}
+
 object alpiste {
-  method energiaQueAporta() = 20
+
+  method energiaQueAporta(){
+    return 20
+  } 
 }
 
 object miAsserter {
