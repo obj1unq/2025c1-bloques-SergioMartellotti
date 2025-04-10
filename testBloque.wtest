@@ -37,6 +37,7 @@ describe "pepita volar" {
     roque.entrenar()
 
     assert.equals(90, pepita.energia())
+    
   }
 
   test "come alpiste y vuela 1000 y come alpiste en rutina"{
@@ -46,8 +47,7 @@ describe "pepita volar" {
       ave.comer(alpiste)
     })
 
-    roque.entrenar()
-
     assert.throwsException({roque.entrenar()})
+    assert.equals(120, pepita.energia())
   }
 }
